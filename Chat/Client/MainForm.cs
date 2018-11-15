@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
         }
     }
 }
