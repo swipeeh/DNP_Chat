@@ -44,6 +44,7 @@
             this.RegisterButton.TabIndex = 0;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // LoginButton
             // 
@@ -87,19 +88,19 @@
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password:";
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 270);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.NameTextBox);
-            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.RegisterButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormLogin";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
