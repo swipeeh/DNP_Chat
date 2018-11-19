@@ -70,21 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChatAppData.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChatAppData.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChatAppData.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChatAppData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChatAppData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChatAppData.edmx</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +84,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs">
-      <DependentUpon>ChatAppData.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,13 +99,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="ChatAppData.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ChatAppData.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ChatAppData.edmx.diagram">
-      <DependentUpon>ChatAppData.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -137,25 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ChatAppData.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ChatAppData.Context.cs</LastGenOutput>
-      <DependentUpon>ChatAppData.edmx</DependentUpon>
-    </Content>
-    <Content Include="ChatAppData.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ChatAppData.edmx</DependentUpon>
-      <LastGenOutput>ChatAppData.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

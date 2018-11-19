@@ -19,8 +19,6 @@ D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\obj\Debug\Client.csproj.GenerateR
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\obj\Debug\Client.exe
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\obj\Debug\Client.pdb
-D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\bin\Debug\Database1.mdf
-D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\bin\Debug\Database1_log.ldf
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\obj\Debug\Client.FormLogin.resources
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\bin\Debug\EntityFramework.dll
 D:\School\DNP1\ProjectDNP\DNP_Chat\Chat\Client\bin\Debug\EntityFramework.SqlServer.dll
