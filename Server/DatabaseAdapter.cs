@@ -1,25 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Text.RegularExpressions;
 
-namespace Client
+namespace Server
 {
-    public partial class FormLogin : Form
+    class DatabaseAdapter
     {
-
-
-        public FormLogin()
-        {
-            InitializeComponent();
-        }
         private bool isPasswordOk()
         {
             if (PasswordTextbox.Text == "")
@@ -49,10 +39,11 @@ namespace Client
         {
             NameTextBox.Clear();
             PasswordTextbox.Clear();
-        }  
-        
-        private void LoginButton_Click(object sender, EventArgs e)
+        }
+
+        private void loginUser(object sender, EventArgs e)
         {
+
             /* MainForm mainForm = new MainForm();
              FormLogin loginForm = new FormLogin();
 
@@ -115,11 +106,11 @@ namespace Client
                             connection.Close();
                         }
                     }
-                } 
+                }
             }
         }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
+        public void registerUser(object sender,EventArgs e)
         {
             if (isPasswordOk() == true && isNameOk() == true)
             {
@@ -134,7 +125,7 @@ namespace Client
 
                         sqlCommand.Parameters.Add(new SqlParameter("@Password", SqlDbType.VarChar, 50));
                         sqlCommand.Parameters["@Password"].Value = PasswordTextbox.Text;
-                        
+
                         try
                         {
                             connection.Open();
@@ -156,5 +147,7 @@ namespace Client
             }
 
         }
+    }
+
     }
 }
