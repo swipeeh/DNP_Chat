@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,12 @@ using System.Windows.Forms;
 
 namespace Server
 {
+    
     class DatabaseAdapter
     {
-        private bool isPasswordOk()
+        /*private bool isPasswordOk()
         {
-            if (PasswordTextbox.Text == "")
+            if (something.Text == "") 
             {
                 MessageBox.Show("Please enter valid name.");
                 return false;
@@ -34,12 +36,7 @@ namespace Server
             {
                 return true;
             }
-        }
-        private void ClearForm()
-        {
-            NameTextBox.Clear();
-            PasswordTextbox.Clear();
-        }
+        }*/
 
         private void loginUser(object sender, EventArgs e)
         {
@@ -61,11 +58,7 @@ namespace Server
              else
                  MessageBox.Show("USER DOES NOT EXIST","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); */
 
-            MainForm mainForm = new MainForm();
-            FormLogin loginForm = new FormLogin();
 
-            if (isPasswordOk() && isNameOk())
-            {
                 using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
                 {
                     const String sql = "SELECT * FROM UsersInfo WHERE loginName = '@LoginName' AND 'password' = @Password";
@@ -86,8 +79,8 @@ namespace Server
                             if ((dataReader.Read() == true))
                             {
                                 MessageBox.Show("Logged in");
-                                mainForm.Show();
-                                this.Hide();
+                               // mainForm.Show();
+                               
                             }
                             else
                             {
@@ -102,18 +95,15 @@ namespace Server
                         }
                         finally
                         {
-                            ClearForm();
                             connection.Close();
                         }
                     }
                 }
-            }
         }
 
         public void registerUser(object sender,EventArgs e)
         {
-            if (isPasswordOk() == true && isNameOk() == true)
-            {
+           
                 using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
                 {
                     using (SqlCommand sqlCommand = new SqlCommand("NewLogin", connection))
@@ -139,15 +129,11 @@ namespace Server
                         finally
                         {
                             MessageBox.Show("New user has been added");
-                            ClearForm();
                             connection.Close();
                         }
                     }
                 }
-            }
 
         }
-    }
-
     }
 }
