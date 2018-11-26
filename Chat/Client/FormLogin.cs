@@ -53,13 +53,13 @@ namespace Client
         
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            /* MainForm mainForm = new MainForm();
+             MainForm mainForm = new MainForm();
              FormLogin loginForm = new FormLogin();
 
              //Login authentificator
-             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\School\\DNP1\\ProjectDNP\\DNP_Chat\\Chat\\Client\\Database1.mdf;Integrated Security=True");
+             SqlConnection con = new SqlConnection(Properties.Settings.Default.connString);
              con.Open();
-             SqlDataAdapter sda = new SqlDataAdapter("select count (*) from Users where loginName ='" + NameTextBox.Text + "' and password ='" + PasswordTextbox.Text + "'", con);
+             SqlDataAdapter sda = new SqlDataAdapter("select count (*) from UsersInfo where loginName ='" + NameTextBox.Text + "' and password ='" + PasswordTextbox.Text + "'", con);
              DataTable dt = new DataTable();
              sda.Fill(dt);
              if (dt.Rows[0][0].ToString() == "1")
@@ -68,9 +68,9 @@ namespace Client
                  this.Hide();
              }
              else
-                 MessageBox.Show("USER DOES NOT EXIST","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); */
+                 MessageBox.Show("USER DOES NOT EXIST","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); 
 
-            MainForm mainForm = new MainForm();
+          /*  MainForm mainForm = new MainForm();
             FormLogin loginForm = new FormLogin();
 
             if (isPasswordOk() && isNameOk())
@@ -116,7 +116,7 @@ namespace Client
                         }
                     }
                 } 
-            }
+            } */
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
